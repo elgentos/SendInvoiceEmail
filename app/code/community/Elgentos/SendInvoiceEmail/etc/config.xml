@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Elgentos_SendInvoiceEmail>
+            <version>0.1.0</version>
+        </Elgentos_SendInvoiceEmail>
+    </modules>
+    <global>
+        <models>
+            <elgentos_sendinvoiceemail>
+                <class>Elgentos_SendInvoiceEmail_Model</class>
+            </elgentos_sendinvoiceemail>
+        </models>
+        <events>
+            <sales_order_payment_pay>
+                <observers>
+                    <elgentos_sendinvoiceemail>
+                        <class>Elgentos_SendInvoiceEmail_Model_Observer</class>
+                        <method>sendInvoiceEmail</method>
+                    </elgentos_sendinvoiceemail>
+                </observers>
+            </sales_order_payment_pay>
+        </events>
+    </global>
+</config>

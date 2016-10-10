@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Elgentos_SendInvoiceEmail>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Authorizenet/>
+                <Mage_Paygate/>
+                <Mage_Payment/>
+                <Mage_Paypal/>
+
+            </depends>
+        </Elgentos_SendInvoiceEmail>
+    </modules>
+</config>

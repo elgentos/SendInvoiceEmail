@@ -1,0 +1,12 @@
+{
+    "name": "elgentos/sendinvoiceemail",
+    "description": "Elgentos_SendInvoiceEmail",
+    "type": "magento-module",
+    "authors": [
+        {
+            "name": "peterjaap",
+            "email": "peterjaap@elgentos.nl"
+        }
+    ],
+    "require": {}
+}
