@@ -9,7 +9,7 @@ class Elgentos_SendInvoiceEmail_Model_Observer
          * @var $paymentMethod Mage_Payment_Model_Method_Abstract
          */
         $invoice       = $observer->getEvent()->getInvoice();
-        $paymentMethod = $observer->getEvent()->getPayment()->getMethodInstance();
+        $paymentMethod = $invoice->getOrder()->getPayment()->getMethodInstance();
 
         $_sendInvoiceEmailsFor = explode(',', Mage::getStoreConfig('sales_email/invoice/send_invoice_email_for_payment_methods', $invoice->getStoreId()));
 
