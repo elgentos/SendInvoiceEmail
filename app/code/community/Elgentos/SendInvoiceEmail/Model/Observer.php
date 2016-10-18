@@ -14,8 +14,6 @@ class Elgentos_SendInvoiceEmail_Model_Observer
         $_sendInvoiceEmailsFor = explode(',', Mage::getStoreConfig('sales_email/invoice/send_invoice_email_for_payment_methods', $invoice->getStoreId()));
 
         if (
-            $invoice->getId()
-            &&
             in_array(
                 $paymentMethod->getCode(),
                 $_sendInvoiceEmailsFor
